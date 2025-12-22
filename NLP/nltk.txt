@@ -1,0 +1,127 @@
+nltk → Natural Language Toolkit (NLP library)
+
+NLTK is not included by default in Python.
+
+You install it to:
+
+Tokenize text
+Remove stopwords
+Perform stemming / lemmatization
+Do basic NLP tasks
+
+
+nltk.download('punkt')
+
+punkt is a pretrained tokenizer model.
+Tokenizer = tool that breaks text into pieces.
+
+from nltk.tokenize import word_tokenize
+word_tokenize("I am learning NLP")
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+tokenization is essential to proceed with NLP (text data), which is used to break down the text into tokens (words).
+
+Regex is used in Google analytics in URL matching in supporting search and replaced in most popular editors like Sublime, Notepad++
+Example :  Regular expression for an email address :
+         ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
+
+
+Using 're' library to work with regular expression.
+
+tokens = re.findall(r"[\w']+", tweet)
+print('Using regexes :',tokens)
+
+
+import nltk
+nltk.download('punkt_tab')
+from nltk.tokenize import word_tokenize
+
+words = word_tokenize(tweet)
+print('Using NLTK :',words)
+Note: word_tokenize() is considering punctuation as a token. Hence we need to remove the punctuations from the initial list.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to tokenize into a Sentence?
+# Splits at '.'
+splits = tweet.split('. ')
+print('Using Splits :',splits)
+# Using Regular Expressions (RegEx)
+sentence_splits = re.compile('[.!?] ').split(tweet)
+print('Using regexes :',sentence_splits)
+
+Note: a drawback of using Python’s split() method is that we can use only one separator at a time.
+Using RegEx, we have an edge over the split() method as we can pass multiple separators simultaneously.
+We used the re.compile() function in the above code wherein we passed [.?!]. It means that sentences will split as soon as any of these characters are encountered.
+
+
+g_sentence = "Dr. A. P. J. Abdul Kalam was the Former President of India and a world-renowned Space Scientist."
+
+Using split :
+['Dr', 'A', 'P', 'J', 'Abdul Kalam was the Former President of India and a world-renowned Space Scientist']
+
+Using NLTK sent_tokenize:
+['Dr. A. P. J. Abdul Kalam was the Former President of India and a world-renowned Space Scientist.']
+
+# Using NLTK
+from nltk.tokenize import sent_tokenize
+sentence_splits = sent_tokenize(tweet)
+print('Using NLTK :',sentence_splits)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A lot of unnecessary words like hashtags, hyperlinks are also tokenized.
+
+Remove hashtags and hyperlinks before tokenization.
+Remove stopwords and punctuations.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Stemming & Lemmatization are different word normalization techniques, that helps us convert the inflection words into the base forms.
+
+Why is it important to convert inflection words to the base forms?
+
+There are scenarios, where different forms of a word conveys related meaning.
+Example "toy" and "toys" have identical meaning. In a search engine, the objective between a search for "toy" and a search for "toys" is probably the same.
+Different ways of writing the same word causes various problems in understanding queries.
+Converting inflection words to the base words is a common practice in NLP domain.
+
+
+Lemmatization
+
+Lemmatization reduces the words properly such that the reduced word also belongs to the language.
+The output of lemmatization is the root lemma and not the root stem (as in stemming).
+Example: 'runs', 'running', 'ran' are all formed from the same word 'run' hence their lemma is 'run'.
+
+Stemming VS Lemmatization
+
+Stemming does not generate actual words where as lemmatization does generate actual words.
+Stemming is a rule based technique and is applied step by step on words without any additional context, it is much faster as compared to lemmatization which needs the entire text or POS tag to generate the root lemma correctly.
+If you need speed then stemming can be preffered else lemmatization is better in most cases.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+So the first question in NLP is:
+
+How do we convert text into numbers?
+
+One common answer: Sparse Representation
+Sparse representation = representing text as a long numerical vector where most values are 0
+Limitations (important to know)
+
+Sparse representation:
+❌ Does not understand meaning
+❌ Does not know “love” ≈ “like”
+❌ Vectors become huge for large vocabularies
+A lot of features are equal to 0.
+Logistic regression model would have to learn n + 1 parameters, where n = size of the vocabulary
+For large vocabulary sizes, this would be problematic.
+Excessive amount of time to train a model and more time to make predictions.
+    
+
+That’s why later we move to:
+Word embeddings (Word2Vec, GloVe)
+Dense representations
+
+Sparse representations do NOT remember the meaning of a sentence.
+They only remember which words appeared.
+And that is a known limitation.
+
+

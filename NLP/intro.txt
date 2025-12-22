@@ -1,0 +1,101 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Natural Language Processing (NLP) 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NLP is a field of AI that helps computers understand, generate, and respond to human language (text or speech) in a useful way.
+
+
+We talk to these assistants not in a programming language, but in our Natural Language — the language we all communicate in.
+
+So, how do computers make sense of it?
+Computers or these devices/machines can only process data in binary, i.e., 0s and 1s.
+While we can represent language data in binary, how do we make machines understand the language?
+This is where Natural Language Processing (NLP) comes in.
+
+An area of computer science that deals with methods to analyze, model, and understand human language. 
+Every intelligent application involving human language has some NLP behind it.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Core application areas:
+
+Email platforms --> Gmail, Outlook, etc.,
+use NLP extensively to provide a range of product features, such as spam classification, priority inbox, calendar event extraction, auto-complete, etc.
+
+Voice-based assistants, --> Apple Siri, Google Assistant, Microsoft Cortana, and Amazon Alexa
+rely on a range of NLP techniques to interact with the user, understand user commands, and respond accordingly.
+
+Modern search engines --> Google and Bing
+query understanding, query expansion, question answering, information retrieval, and ranking and grouping of the results, to name a few.
+
+Machine translation services --> Google Translate, Bing Microsoft Translator, and Amazon Translate
+
+Organizations across verticals analyze their social media feeds to build a better and deeper understanding of the voice of their customers.
+
+E-commerce platforms like Amazon: are extracting relevant information from product descriptions to understanding user reviews.
+
+NLP is used in a range of learning and assessment tools and technologies, such as automated scoring in exams like the
+Graduate Record Examination (GRE),
+plagiarism detection (e.g., Turnitin),
+Intelligent tutoring systems, and
+language learning apps like Duolingo.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Commonly Implemented Tasks in NLP:
+
+Main NLP tasks that appear frequently across various NLP projects:
+
+1.Language modeling: Choosing the most probable word sequence
+This is the task of predicting what the next word in a sentence will be based on the history of previous words. 
+The goal of this task is to learn the probability of a sequence of words appearing in a given language. Language modeling is useful for building solutions for a wide variety of problems, such as
+spelling correction,
+speech recognition,
+optical character recognition,
+handwriting recognition, and
+machine translation.
+Language modeling: learns how likely word sequences are, so machines can choose the most natural and correct sentence in any situation.
+
+2.Text classification: This is the task of bucketing the text into a known set of categories based on its content. 
+Text classification is by far the most popular task in NLP and is used in a variety of tools, from email spam identification to sentiment analysis.
+Taking a piece of text and assigning it to one of the predefined categories (labels) based on its meaning.
+Think of it like sorting messages into folders.
+Example:
+Text: “Congratulations! You won ₹10,000”
+Category: Spam
+“Bucketing into known categories” — what does that mean?
+Known categories = labels are already decided
+Model’s job = choose which label fits best
+Example categories:
+Spam / Not Spam
+Positive / Negative / Neutral
+So this is a supervised learning task (labels are known during training).
+
+3.Information extraction: As the name indicates, this is the task of extracting relevant information from text, 
+such as calendar events from emails or the names of people mentioned in a social media post.
+Gmail extracts destination from tickets whenever we are traveling.
+Email text:
+“Your flight from Delhi to Bengaluru departs on 25 Dec at 6:30 AM.”
+Information extracted:
+From: Delhi
+To: Bengaluru
+Date: 25 Dec
+Time: 6:30 AM
+Type: Flight
+
+4.Information retrieval: This is the task of finding documents relevant to a user query from a large collection. Applications like Google Search are well-known use cases of information retrieval.
+Semantic seach engine
+
+5.Conversational agent: This is the task of building dialogue systems that can converse in human languages. 
+Alexa, Siri, etc., are some common applications of this task.
+
+6.Text summarization: This task aims to create short summaries of longer documents while retaining the core content and preserving the overall meaning of the text.
+Inshorts
+Creating automated abstracts
+
+7.Question answering: This is the task of building a system that can automatically answer questions posed in natural language.
+
+8.Machine translation: This is the task of converting a piece of text from one language to another. Tools like Google Translate are common applications of this task.
+
+9.Topic modeling: This is the task of uncovering the topical structure of a large collection of documents. 
+Topic modeling is a common text-mining tool and is used in a wide range of domains, from literature to bioinformatics.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------

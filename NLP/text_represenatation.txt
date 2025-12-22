@@ -1,0 +1,37 @@
+finding similar article to it ? 
+good recommendation system always win 
+
+contractions library 
+
+one hot encoding for text representation ?  its spase represenation but how ? 
+
+
+what is sematic represenation and what is other types? 
+
+count vectorizer ?  
+
+
+tf- idf ? 
+what is this ? 
+waht is tf with example ?
+waht is idf with example ?
+and how together ? 
+
+
+https://www.deep-ml.com/ -- what is this website about ? 
+
+
+diff between bag of words , tfidf and word embeddings ?
+draw backs of it ? 
+
+
+wht is bigram ?
+
+diff betweeen drawbacks of one hot encoigding and tfidf ? and all interview question 
+
+
+eucilean distance ? 
+cosine similarity ?
+
+
+tqdm?

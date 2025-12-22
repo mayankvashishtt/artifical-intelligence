@@ -1,0 +1,108 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+To understand what complexity means, we need to understand - What does a Language consist of?
+
+Language is a structured system of communication that involves complex combinations of its constituent components, such as characters, words, sentences, etc.
+The systematic study of language is called Linguistics.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Heuristics-Based Approach (Rule-Based)
+You manually write rules based on human logic and experience.
+No learning. No data.
+Just IF–ELSE rules.
+
+Example (Spam detection)
+
+Rules:
+IF email contains “win money” → spam
+IF email contains “free offer” → spam
+
+Pros & Cons
+
+✅ Easy to understand
+✅ Works for small problems
+
+❌ Breaks easily
+❌ Cannot handle new patterns
+❌ Huge number of rules needed
+
+Where it was used
+
+Early spell checkers
+Simple chatbots
+Early email filters
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Machine Learning Approach
+Instead of writing rules, you give examples and let the computer learn the rules itself.
+
+You provide:
+
+Text
+Correct labels
+The model learns patterns.
+
+Example (Spam detection)
+
+Training data:
+| Email           | Label    |
+| --------------- | -------- |
+| “Win money now” | Spam     |
+| “Meeting at 5”  | Not Spam |
+
+Model learns:
+Which words indicate spam
+How strongly they indicate spam
+Then it computes:
+P(Spam | email)
+
+Pros & Cons
+
+✅ Learns from data
+✅ Adapts to new patterns
+✅ Much more accurate
+
+❌ Needs labeled data
+❌ Feature engineering required
+
+Algorithms used
+Naive Bayes
+Logistic Regression
+SVM
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Deep Learning Approach
+
+The model learns everything automatically, including:
+Features
+Patterns
+Context
+Meaning
+
+Inspired by the human brain (neural networks).
+
+Example (Spam detection)
+Deep model:
+Understands context
+Understands phrasing
+Handles slang & variations
+
+Example:
+“Congratulations 🎉 you’ve been selected”
+Even without “win money”, it detects spam.
+
+Pros & Cons
+
+✅ Best accuracy
+✅ Understands context & meaning
+✅ Handles huge data
+
+❌ Needs lots of data
+❌ Computationally expensive
+❌ Harder to interpret
+
+Models used
+RNN / LSTM
+Transformers (BERT, GPT)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
