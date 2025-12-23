@@ -1,0 +1,59 @@
+word embeddings
+ 
+how google to google search in its early days ? 
+
+
+what are transformer and when to use them ?
+
+
+word2vec? 
+
+
+what is gensim package ? 
+Gensim is a Python NLP library that:
+
+implements Word2Vec
+handles training efficiently
+lets you load pre-trained embeddings
+
+
+langdetect ? package
+
+
+word2vec? 
+Word2Vec learns word meaning by learning which words appear near each other.
+here Meaning = statistical similarity of contexts
+Slide a window over text and record who appears near whom
+
+
+
+model = Word2Vec(
+    sentences=tokenized_sentences,
+    vector_size=50,   # embedding size
+    window=2,         # context window
+    min_count=1,      # include all words
+    sg=1              # 1 = Skip-Gram, 0 = CBOW
+)
+
+what all the argument mean here in word2vec model ? 
+
+
+model.wv.most_similar("learning")
+
+word2vec
+Compare vector("learning") 
+with 
+vector(all other words)
+
+benefit of word2vec?
+Problems / Limitations of Word2Vec (in depth)
+This is called polysemy problem.
+Word2Vec ignores order inside context window.
+Word2Vec ignores order inside context window.
+Cannot handle unseen words (OOV problem)
+Stopwords dominate unless cleaned
+
+
+Word2Vec learns static semantic embeddings from local context but fails to handle polysemy, word order, long-range context, and unseen words, which led to the development of contextual embedding models like BERT.
+
+where is pca is used in word2vec
