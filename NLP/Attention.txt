@@ -1,0 +1,105 @@
+Attention 
+architecture?
+
+
+
+
+how attention block works ? 
+
+
+u knw what is word2vec? glove embeddings ? 
+
+
+problem with word2vec embedding?
+ans -- static embeeddings
+that's the problem attention mechanism is solving. 
+contextual emabeddings ??
+
+what is lstm and how it use in attendtion mechanism ??
+
+bank have 2 meaning then.   ? 
+
+
+encoder - decoder architecture 
+how this architecture works ? 
+explain with example 
+how attention is used in encoder - decoder architecture ?
+
+
+
+how will i convert 
+turn off the lights 
+encoded then to decoded 
+attention mechanism in it ? 
+to hindi using this ? 
+
+
+how to convert one english para to hindi using this 
+explain as very beginner 
+and if para is tooo big 
+
+
+hidden representation has encoded the meaning of all the words before in the sentence ? 
+
+
+
+
+aspect based sentinment analysis ? 
+
+
+classification using lstm ? 
+
+then how using lstm + attention mechanism ? 
+
+
+what is key query and value ? 
+
+
+role of dot product in attention mechanism ?
+
+ex = money bank grows
+after dot product of all 3 words in sentence including it
+then to softmax ? why softmax here ? what is this 
+got 3 weights now 
+mulitply these weights with value vectors ? 
+then add them to get final attention vector ?
+what is key value and query vector here ?
+
+self attention block ? 
+
+and what is cross attention explain with example ?
+
+
+
+explain attention with code too ? 
+
+gensim give word2vec embedding 
+glove vector how ? 
+and how glove vector is diff from word2vec ?\
+how to get in python 
+
+
+
+what is energy function ?
+ 
+
+ what is single headed attention block ?
+  
+
+side question 
+how gpu excels in matrix multiplications ? 
+
+
+
+
+multi head attention ?
+the man saw the astronomer with a telescope
+how multi head attention help here ?    
+how self attention fails here ?
+explai and solve with example 
+
+how multi head attention block work ?
+why multiple heads ?
+how to implement attention block in pytorch ?
+its architecture?
+implement it with example with 3 attention blocks ? 
