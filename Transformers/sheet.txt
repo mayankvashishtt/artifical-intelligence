@@ -1,0 +1,35 @@
+
+Visualizing transformers and attention 
+
+transformer 
+first came in attention is all you need paper
+
+
+
+divide text(or anything else like sound or voice or image) into tokens 
+why not just break it into character ? 
+
+
+attention -- multilayer perceptron 
+what is this and how they work ? 
+why we go back and forth in it ? -- i mean why we do many repetation 
+
+
+embeedding vector
+
+
+
+how many vectors you can put in n dimensional space so that
+every vector is at least 90 degree away from each other ?
+ans --> n 
+explain how ? 
+
+how many vectors you can put in n dimensional space so that
+every vector is between 88 degree and 92 degree apart. 
+ans --> exponential in n
+explain how ?
+
+
+what is embedding space - 12,288 dimensional 
+then what is query/key space ?  -- 128 dimensional
+dot product use here ?
