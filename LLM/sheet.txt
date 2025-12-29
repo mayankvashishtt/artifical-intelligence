@@ -1,0 +1,46 @@
+large language model 
+
+llama-2-70b 
+explain this model 
+
+have paramters file and run.c file 
+paramter file -- 140 gb 
+run.c -- 500 lines of C code 
+
+
+
+how LLM training works ? 
+how this model was trained ? 
+chunk of the internet data -- 10TB of text. 
+6000 GPUs for 12 days 2M dollar 
+140 gb file 
+
+
+
+-- explain this above 
+
+
+llm is basically a neural network with transformer architecture trained on huge text data.
+that predict the next words in the sequence  
+
+
+whts relation between predicition and compression in NN of LLM 
+
+
+
+what is transformer NN architecture ?
+
+
+is reverse curse problem solved in LLM now ? 
+
+
+training the assistants? 
+second stage of training fine -tuning 
+what we do in every stage and how its diff from other stage 
+why we need mutlitple stages of training ? 
+
+
+stage 1 : pretraining
+stage 2 : fine tuning
+stage 3 : alignment
+explain all stage in very detial 
