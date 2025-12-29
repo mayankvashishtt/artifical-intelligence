@@ -44,3 +44,23 @@ stage 1 : pretraining
 stage 2 : fine tuning
 stage 3 : alignment
 explain all stage in very detial 
+
+-----------------------------
+
+
+bakcpropogation in LLM ? 
+how backpropogation works in LLM ?
+what is it ? '
+
+is RLHF used in LLM training ?
+and it is part of fine tuning? 
+
+
+role of attention mechanism in LLM ?
+role of feedforward NN in LLM ?
+how both are related and what are both ? 
+
+
+if we are predicrting the next word only 
+then how the hell it can answer my questions
+as its just predicting the next word 
