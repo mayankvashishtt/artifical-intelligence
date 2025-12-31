@@ -1,0 +1,47 @@
+most of thre LLM reply on the transformer architecture
+
+attention is all you need introcued transformer architecture
+
+origingal transformer was developed for machine translation 
+translating english text to german and french 
+
+
+explain tranfromer architecture in detail ?
+transformer architecture has mainly 2 parts
+1. encoder
+2. decoder
+
+
+explain everything to me wht is encoder and decoder too 
+
+and do it happen again. and again from starting as it predict only one word at a time ? 
+
+why gpt doesnt have encoder part ?
+
+self attention ? 
+what is possible because of self attention ? that was not before ?
+
+
+BERT 
+biderctional encoeder represenation from transformers
+predicts hidden words in a given sentence
+only have encoder part of transformer architecture
+
+
+GPT 
+generative pre trained transformer
+generates new word
+only have decoder part of transformer architecture
+
+
+diff  between gpt and bert ?
+
+not all transformer are llm 
+llm are large language model built on transformer architecture
+tranformer can also be used for other tasks like vision transformer for image processing
+even not llm are not transformer based like rnn lstm etc
+
+
+
+ViT vs CNN ? 
+how ViT is better than CNN ?    
