@@ -1,0 +1,37 @@
+ELIZA talking -- first of the chat bot 
+
+close source model and open weight model 
+
+
+
+large language model -- LLM
+nerual networks designed to understand, generate and respond to human like text
+core of llm is nn 
+
+
+large in llm --> models have billon of paramters and growing day by day. 
+what is token size ? 
+
+
+if large model means that is only deals with language 
+then how gpt is able to undersatnd image ? 
+
+The shift from LLM (Large Language Model) to LMM (Large Multimodal Model) is a direct response to these models moving beyond text-only capabilities. 
+
+
+
+
+why LLM is so better than NLP ? 
+that is transformer architecture ?
+
+
+LLM < Deep Learning < Machine Learning < AI
+diff between deep learning and machine learning. 
+
+
+bsically ai and ml have diff like if the ai is learning rule based then its not ml 
+ai when have ability to learn from data then it is ml
+am i right ?
+
+and when machine learning model uses NN then it is deep learning ? 
+
