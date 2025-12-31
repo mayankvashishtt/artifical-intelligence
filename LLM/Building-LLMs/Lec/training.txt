@@ -1,0 +1,54 @@
+creating an LLM 
+there are stages 
+-pretraining 
+-fine tuning 
+
+
+data in gpt was taken from 
+common crawl 
+webtext2 
+books1 and books2
+wikipedia
+
+
+we trained llm to train next word but it was observed 
+it can do more than that like question answering, translation, mulitple choice 
+
+
+pretraining is ? 
+pretraining is training a large model on a large dataset to
+learn general language patterns and knowledge. This stage helps the model understand grammar, 
+facts about the world, and some reasoning abilities by predicting the next word in a sentence.
+
+fine tuning is ?
+fine tuning is taking a pretrained model and training it on a smaller, specific dataset to adapt it
+to particular tasks or domains. This stage helps the model perform better on specific applications like
+sentiment analysis, question answering, or other specialized tasks by adjusting its parameters based on the new
+
+
+needed when data is limited for specific task 
+when we want model to perform well on specific domain
+
+
+
+in pretaining we use unlabeledt data ? means 
+
+and in fine tuning we use labeled data ? means
+
+
+
+
+do chatgpt is fine tuned ? 
+or just pre trained ? 
+
+
+Raw text -- regular text without any labeling information 
+
+
+there are 2 types of fine tuning. --> 
+instruction finetuning  -- instruction answer pair as labelled dataset
+fintetuning for classification task -- labled dataset of text and associated class lable like spam or non spam in email 
+
+
+
+pretirainend is not possible unless you have a lot of money and compute power in millions of dollars
