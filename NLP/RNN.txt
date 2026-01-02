@@ -1,0 +1,27 @@
+Word2Vec DOES embeddings
+It learns vectors so similar words are close (king–queen vibes).
+That’s why it’s better than BOW / TF-IDF.
+
+RNN does NOT do word embeddings
+This is key. RNN doesn’t learn word meaning directly.
+What RNN actually does:
+You feed embeddings INTO RNN (from Word2Vec/GloVe/etc).
+RNN then learns context + order over time.
+
+Classic NLP pipeline was:
+Text → Word Embeddings → RNN → Output
+
+ann network?
+
+
+Introduction to Recurrent Neural Networks (RNNs)
+Problems with traditional neural networks for sequential data
+RNN architecture and how it addresses temporal dependencies
+Types of RNN architectures (one-to-one, one-to-many, many-to-one, many-to-many)
+Word embeddings in RNNs
+Mathematical formulation of RNNs (forward pass)
+Backpropagation through time (BPTT) for RNNs
+Vanishing and exploding gradient problems in RNNs
+Basic implementation of RNN using TensorFlow/Keras
+Introduction to Long Short-Term Memory (LSTM) networks (brief mention)
+The session focused heavily on the mathematical foundations of RNNs, including the forward pass and backpropagation through time. The instructor also emphasized the importance of understanding these concepts deeply and encouraged students to practice the mathematics by hand.
