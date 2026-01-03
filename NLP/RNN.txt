@@ -25,3 +25,300 @@ Vanishing and exploding gradient problems in RNNs
 Basic implementation of RNN using TensorFlow/Keras
 Introduction to Long Short-Term Memory (LSTM) networks (brief mention)
 The session focused heavily on the mathematical foundations of RNNs, including the forward pass and backpropagation through time. The instructor also emphasized the importance of understanding these concepts deeply and encouraged students to practice the mathematics by hand.
+
+
+
+# Recurrent Neural Networks (RNN) & LSTM — Complete Notes
+
+These notes summarize **everything we discussed step‑by‑step**, from intuition to math to code, in a clean, exam‑ready way.
+
+---
+
+## 1. Why RNNs Exist
+
+### Problem with Traditional Neural Networks (ANN)
+
+* ANN processes inputs **independently**.
+* It has **no memory** of previous inputs.
+* Word order is ignored.
+
+Example:
+
+* "dog bites man" = "man bites dog" for ANN ❌
+
+ANN fails for:
+
+* Text
+* Speech
+* Time series
+
+---
+
+## 2. What is an RNN?
+
+**RNN = Recurrent Neural Network**
+
+Key idea:
+
+> RNN processes data **step by step** and carries information forward using memory.
+
+* Designed for **sequential data**
+* Uses the same weights at every time step
+* Maintains a **hidden state** (memory)
+
+---
+
+## 3. RNN Architecture (Core Idea)
+
+At each time step `t`:
+
+* Input: `xₜ`
+* Previous memory: `hₜ₋₁`
+* Output memory: `hₜ`
+
+Forward logic:
+
+```
+hₜ = tanh(Wₓ xₜ + Wₕ hₜ₋₁ + b)
+```
+
+* `hₜ` = hidden state (short‑term memory)
+* Memory flows **forward in time**
+
+---
+
+## 4. Types of RNN Architectures
+
+| Type        | Example                      |
+| ----------- | ---------------------------- |
+| One → One   | Image → label (ANN, not RNN) |
+| Many → One  | Sentence → sentiment         |
+| One → Many  | Image → caption              |
+| Many → Many | Translation, text generation |
+
+**Rule:**
+
+> Use RNN if **input or output is a sequence**.
+
+---
+
+## 5. Word Embeddings in RNN
+
+Neural networks **cannot read text**.
+
+Pipeline:
+
+```
+Text → Tokenizer → Numbers → Embedding → RNN → Output
+```
+
+### Embedding Layer
+
+* Converts word indices into dense vectors
+* Learns semantic meaning automatically
+
+Example:
+
+```
+"good" → [0.12, -0.44, 0.89, ...]
+```
+
+RNN **does not care** how embeddings are created.
+It only processes vectors.
+
+---
+
+## 6. Forward Propagation (RNN)
+
+Forward pass = **prediction only** (no learning).
+
+Steps:
+
+1. Start with `h₀ = 0`
+2. For each word:
+
+```
+hₜ = tanh(Wₕ hₜ₋₁ + Wₓ xₜ + b)
+```
+
+3. Final output:
+
+```
+y = Wᵧ h_T
+```
+
+---
+
+## 7. Backward Propagation Through Time (BPTT)
+
+Backward pass = **learning phase**.
+
+* Error is calculated at final output
+* Error flows **backward through all time steps**
+
+Main BPTT equation:
+
+```
+∂L / ∂Wₕ = Σ (t = 1 to T) ∂L/∂hₜ · ∂hₜ/∂Wₕ
+```
+
+Meaning:
+
+> The recurrent weight is blamed using contributions from **all time steps**.
+
+---
+
+## 8. Jacobians in RNN
+
+Jacobian:
+
+```
+Jₜ = ∂hₜ / ∂hₜ₋₁
+```
+
+* Measures how current memory depends on previous memory
+* During BPTT, Jacobians are **multiplied repeatedly**
+
+Backward gradient flow:
+
+```
+∂L/∂h₁ = ∂L/∂h_T × J_T × J_{T-1} × ... × J_2
+```
+
+---
+
+## 9. Vanishing & Exploding Gradient Problem
+
+### Vanishing Gradient ❄️
+
+* Jacobian values < 1
+* Repeated multiplication → gradients → 0
+* Early time steps get **no learning**
+
+### Exploding Gradient 💥
+
+* Jacobian values > 1
+* Gradients grow uncontrollably
+* Training becomes unstable
+
+---
+
+## 10. Truncated BPTT
+
+Instead of backpropagating till `t = 1`:
+
+```
+t = T → T-k
+```
+
+Benefits:
+
+* Faster training
+* More stable gradients
+* Reduced vanishing/exploding effect
+
+---
+
+## 11. Basic RNN Implementation (TensorFlow / Keras)
+
+```python
+model = Sequential([
+    Embedding(input_dim=10000, output_dim=64),
+    SimpleRNN(64),
+    Dense(1, activation="sigmoid")
+])
+
+model.compile(
+    optimizer="adam",
+    loss="binary_crossentropy",
+    metrics=["accuracy"]
+)
+```
+
+* `Embedding` → word vectors
+* `SimpleRNN` → sequence processing + memory
+* `Dense` → final prediction
+
+Training:
+
+```python
+model.fit(X, y, epochs=5)
+```
+
+Keras automatically handles:
+
+* Forward pass
+* BPTT
+* Gradient updates
+
+---
+
+## 12. Why RNN Fails for Long Sequences
+
+* Repeated Jacobian multiplication
+* Memory fades for long dependencies
+* Vanishing gradient problem
+
+This led to **LSTM**.
+
+---
+
+## 13. LSTM (Brief Introduction)
+
+**LSTM = Long Short‑Term Memory**
+
+Key improvements:
+
+* Introduces **cell state (`cₜ`)** → long‑term memory
+* Uses **gates** to control information flow
+
+### Two States in LSTM
+
+* `cₜ` → long‑term memory (stored using ADDITION)
+* `hₜ` → short‑term / output memory
+
+Cell update:
+
+```
+cₜ = fₜ ⊙ cₜ₋₁ + iₜ ⊙ gₜ
+```
+
+Why it works:
+
+* Uses **addition, not repeated multiplication**
+* Gradients flow without vanishing
+
+---
+
+## 14. Key Exam‑Ready One‑Liners
+
+* RNNs process sequential data by maintaining a hidden state across time steps.
+* RNNs are trained using Backpropagation Through Time.
+* Vanishing gradients occur due to repeated multiplication of Jacobians.
+* Truncated BPTT limits backward steps to stabilize training.
+* LSTM avoids vanishing gradients using a gated, additive cell state.
+
+---
+
+## 15. Final Mental Model
+
+```
+Words → Numbers → Embeddings → RNN Memory → Output
+```
+
+RNN = short‑term memory
+LSTM = short + long‑term memory
+
+---
+
+✅ These notes fully cover:
+
+* Concepts
+* Architecture
+* Math intuition
+* BPTT
+* Jacobians
+* Gradient problems
+* Code basics
+
+
